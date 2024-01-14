@@ -10,6 +10,7 @@ declare module 'vue' {
     HelloWorld: (typeof import('./../src/components/HelloWorld.vue'))['default'];
     NaiveProvider: (typeof import('./../src/components/common/NaiveProvider.vue'))['default'];
     NavBar: (typeof import('./../src/components/common/NavBar.vue'))['default'];
+    NCarousel: (typeof import('naive-ui'))['NCarousel'];
     NConfigProvider: (typeof import('naive-ui'))['NConfigProvider'];
     NDialogProvider: (typeof import('naive-ui'))['NDialogProvider'];
     NFlex: (typeof import('naive-ui'))['NFlex'];

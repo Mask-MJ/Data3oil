@@ -23,7 +23,6 @@ export function createVitePlugins(): PluginOption[] {
       // 自动导入 vue vue-router
       imports: [
         'vue',
-        'vue-i18n',
         VueRouterAutoImports,
         { 'vue-router/auto': ['useLink'] },
         { 'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar'] },

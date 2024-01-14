@@ -148,7 +148,6 @@ declare module 'vue' {
     readonly useCssModule: UnwrapRef<(typeof import('vue'))['useCssModule']>;
     readonly useCssVars: UnwrapRef<(typeof import('vue'))['useCssVars']>;
     readonly useDialog: UnwrapRef<(typeof import('naive-ui'))['useDialog']>;
-    readonly useI18n: UnwrapRef<(typeof import('vue-i18n'))['useI18n']>;
     readonly useLink: UnwrapRef<(typeof import('vue-router/auto'))['useLink']>;
     readonly useLoadingBar: UnwrapRef<(typeof import('naive-ui'))['useLoadingBar']>;
     readonly useMessage: UnwrapRef<(typeof import('naive-ui'))['useMessage']>;
@@ -220,7 +219,6 @@ declare module '@vue/runtime-core' {
     readonly useCssModule: UnwrapRef<(typeof import('vue'))['useCssModule']>;
     readonly useCssVars: UnwrapRef<(typeof import('vue'))['useCssVars']>;
     readonly useDialog: UnwrapRef<(typeof import('naive-ui'))['useDialog']>;
-    readonly useI18n: UnwrapRef<(typeof import('vue-i18n'))['useI18n']>;
     readonly useLink: UnwrapRef<(typeof import('vue-router/auto'))['useLink']>;
     readonly useLoadingBar: UnwrapRef<(typeof import('naive-ui'))['useLoadingBar']>;
     readonly useMessage: UnwrapRef<(typeof import('naive-ui'))['useMessage']>;
