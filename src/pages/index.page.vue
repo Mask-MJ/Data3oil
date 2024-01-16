@@ -2,19 +2,19 @@
   const businessEcologyList = [
     {
       id: 1,
-      title: '数字化',
+      title: '大数据',
       img: '/qiyeshuzihua1.png',
       desc: '致力于为传统企业提供数字化、智能化技术赋能，以波形、时深数据为主线，研发包括地震噪音去除、断裂识别、初至拾取、地震相识别等行业算法。',
     },
     {
       id: 2,
-      title: '人工智能',
+      title: '大模型',
       img: '/rengongzhineng2.png',
       desc: '专注人工智能在细分领域的软件定制、前后端开发、平台搭建、私域大模型部署训练工程化方案等。专注AI，深耕垂直细分领域，为垂直细分行业企业数字化技术赋能。',
     },
     {
       id: 3,
-      title: '产业融合',
+      title: '多模态',
       img: '/ronghe3.png',
       desc: '服务智能制造企业数字化转型，包括企业计划管理及运用私域大模型技术对pdf相关语言类格式转置及关键要素提取等非结构化数据转结构化等算法项目。',
     },
@@ -22,7 +22,7 @@
   const newsList = [
     {
       id: 1,
-      monthTime: '1月',
+      monthTime: '11月',
       dayTime: '1日',
       title: '人工智能第三次浪潮带来难得机遇，物探行业智能化发展需求迫切而广泛',
     },
@@ -58,7 +58,7 @@
 
 <template>
   <div>
-    <!-- 首页 -->
+    <!-- 首屏 -->
     <div class="screen">
       <video
         class="video"
@@ -74,7 +74,8 @@
         class="absolute top-85% left-50% -translate-50% text-center text-4xl leading-snug color-white"
       >
         <p class="mb-10">
-          用AI为智能制造企业数字化赋能 <br />
+          用AI为传统央企数字化赋能
+          <br />
           打造最好的行业融合AI公司
         </p>
         <div class="flex-center">
@@ -128,7 +129,7 @@
     <div class="company-introduction h-100vh flex-center">
       <div class="w-80% h-40%">
         <p class="color-neutral-200 mb-2">公司简介</p>
-        <h2 class="text-3xl font-bold mb-4 color-#fff">
+        <h2 class="text-3xl font-bold mb-4 color-white">
           整合 · 共享 · 创新
           <br />
           构建共融共生的AI商业生态
@@ -155,62 +156,101 @@
         </div>
       </div>
     </div>
-    <!-- 新闻中心 -->
-    <div class="news h-100vh pt-10 mx-20">
-      <h2 class="text-3xl font-bold mb-10">新闻中心</h2>
-      <div class="flex flex-wrap">
-        <n-carousel autoplay class="w-62% b-rd-2 mx-3 mb-10">
-          <img class="carousel-img" src="../assets/xibao.png" />
-          <img
-            class="carousel-img"
-            src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
-          />
-          <img
-            class="carousel-img"
-            src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
-          />
-          <img
-            class="carousel-img"
-            src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
-          />
-          <img
-            class="carousel-img"
-            src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
-          />
-        </n-carousel>
+    <!-- 新闻资讯 -->
+    <div class="news py-20 mx-80">
+      <h2 class="text-3xl font-bold mb-10">新闻资讯</h2>
+      <n-grid :x-gap="20" :y-gap="16" :cols="3">
+        <n-grid-item :span="2">
+          <n-carousel autoplay draggable class="b-rd-2">
+            <img class="carousel-img" src="../assets/xibao.png" />
+            <img
+              class="carousel-img"
+              src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+            />
+            <img
+              class="carousel-img"
+              src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
+            />
+            <img
+              class="carousel-img"
+              src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
+            />
+            <img
+              class="carousel-img"
+              src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
+            />
+          </n-carousel>
+        </n-grid-item>
+
+        <n-grid-item v-for="item in newsList" :key="item.id">
+          <div class="h-full b-rd-2 py-5 px-10 border border-neutral-300 cursor-pointer news-item">
+            <div class="mb-5 bg-#999 inline-block color-white">
+              <span class="w-10 inline-block text-center">{{ item.monthTime }}</span>
+              <span class="news-dayTime w-12 text-center"> {{ item.dayTime }}</span>
+            </div>
+            <div class="text-xl font-bold h-30 hover:translate-x-8 transition-all-500">
+              {{ item.title }}
+            </div>
+            <div class="news-line"></div>
+            <div class="font-bold">查看详情 > </div>
+          </div>
+        </n-grid-item>
+      </n-grid>
+    </div>
+    <!-- 数字化转型案例 -->
+    <div class="py-20 mx-80">
+      <h2 class="text-3xl font-bold mb-10">数字化转型案例</h2>
+      <div class="h-100 border border-#999">内容占位</div>
+    </div>
+    <!-- 地球物理板块 -->
+    <div class="py-20 mx-80">
+      <h2 class="text-3xl font-bold mb-10">地球物理板块</h2>
+      <div class="h-100 border border-#999">内容占位</div>
+    </div>
+    <!-- 深度学习算法预研 -->
+    <div class="py-20 mx-80">
+      <h2 class="text-3xl font-bold mb-10">深度学习算法预研</h2>
+      <div class="h-100 border border-#999">内容占位</div>
+    </div>
+    <!-- 大模型技术跟踪 -->
+    <div class="py-20 mx-80">
+      <h2 class="text-3xl font-bold mb-10">大模型技术跟踪</h2>
+      <div class="h-100 border border-#999">内容占位</div>
+    </div>
+    <!-- 联系 -->
+    <div class="contact-bg w-full h-80 flex-center">
+      <div class="py-5 w-150 color-white">
+        <div class="text-4xl font-bold mb-10 text-center"> 和我们的专家聊聊您的项目？ </div>
+        <div class="mb-10 text-center">了解我们如何为专为您提供优质服务</div>
         <div
-          v-for="item in newsList"
-          :key="item.id"
-          class="b-rd-2 w-30% p-5 mx-3 mb-10 border border-neutral-300"
+          class="w-50 h-15 border m-auto cursor-pointer border-white text-lg b-rd-1 flex-center text-center"
         >
-          <div class="mb-5">
-            {{ item.monthTime }}
-            <span></span>
-            {{ item.dayTime }}
-          </div>
-          <div class="font-bold h-30">
-            {{ item.title }}
-          </div>
-          <div class="border-b border-neutral-300 mb-5"></div>
-          <div>查看详情 > </div>
+          立即咨询
         </div>
       </div>
     </div>
+    <!-- 底部占位 -->
+    <NavFooter />
+    <!-- 回到顶部 -->
+    <n-back-top :right="60" />
   </div>
 </template>
 
 <style lang="scss" scoped>
-  .video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .screen {
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .banner-icon {
+      animation: runArraw 1.5s linear infinite;
+    }
   }
-  .banner-icon {
-    animation: runArraw 1.5s linear infinite;
-  }
+
   @keyframes runArraw {
     0% {
       transform: translateY(-5px);
@@ -257,8 +297,62 @@
   .news {
     .carousel-img {
       width: 100%;
-      height: 300px;
+      height: 400px;
       object-fit: cover;
+      transition: transform 0.5s ease;
     }
+    .carousel-img:hover {
+      transform: scale(1.1);
+    }
+    .news-dayTime {
+      margin-left: 5px;
+      padding: 0 8px;
+      background: #0073e5;
+      position: relative;
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .news-dayTime::before {
+      content: '';
+      display: block;
+      border-color: transparent #999;
+      /*上下颜色 左右颜色*/
+      border-width: 0 0 24px 5px;
+      border-style: solid;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .news-line {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .news-line::before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      top: 0;
+      background: rgba(213, 213, 213, 0.5);
+    }
+    .news-line::after {
+      content: '';
+      width: 0;
+      height: 1px;
+      position: absolute;
+      top: 0;
+      background: #003686;
+      transition: all ease-out 0.3s 0.1s;
+    }
+    .news-item:hover .news-line::after {
+      width: 100%;
+    }
+  }
+  .contact-bg {
+    background-image: url('../assets/lianxi-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 </style>
