@@ -1,24 +1,37 @@
 <script setup lang="ts">
-  // const router = useRouter();
-  // const activeKey = ref('home');
   const menuOptions = [
     { id: 'home', label: '首页', path: '/' },
+    { id: 'about', label: '公司简介', path: '/about' },
     { id: 'case', label: '数字化转型案例', path: '/case' },
-    { id: 'news', label: '新闻资讯', path: '/news' },
     { id: 'geophysics', label: '地球物理板块', path: '/geophysics' },
     { id: 'algorithm', label: '深度学习算法预研', path: '/algorithm' },
     { id: 'model', label: '大模型技术跟踪', path: '/model' },
+    { id: 'news', label: '新闻资讯', path: '/news' },
   ];
+  const scrollY = ref(0);
+  onMounted(() => {
+    window.addEventListener('scroll', () => {
+      scrollY.value = window.scrollY;
+    });
+  });
+  onDeactivated(() => {
+    window.removeEventListener('scroll', () => {
+      scrollY.value = 0;
+    });
+  });
 </script>
 
 <template>
   <div
     class="header w-full flex-center color-white hover:bg-white hover:color-black fixed top-0 transition-500"
+    :class="scrollY && 'bg-white color-black! z-999'"
   >
     <img class="w-20 h-20" src="../../assets/logo.jpg" alt="" />
-    <ul class="item w-200 flex-center">
-      <li v-for="item in menuOptions" :key="item.id" class="mx-4 font-800">
-        {{ item.label }}
+    <ul class="item w-250 flex-center">
+      <li v-for="item in menuOptions" :key="item.id" class="mx-4 text-lg">
+        <router-link :to="item.path">
+          {{ item.label }}
+        </router-link>
       </li>
     </ul>
   </div>
