@@ -1,0 +1,190 @@
+<!-- 文化地球物理 -->
+<script setup lang="ts">
+  // Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+
+  // Import Swiper styles
+  import 'swiper/css';
+
+  import 'swiper/css/effect-coverflow';
+  import 'swiper/css/pagination';
+  import 'swiper/css/effect-cube';
+  // import required modules
+  import { EffectCoverflow, Pagination, EffectCube } from 'swiper/modules';
+  const showList = [
+    '/geophysics/jishuzhanshi1.png',
+    '/geophysics/jishuzhanshi2.png',
+    '/geophysics/jishuzhanshi3.png',
+    '/geophysics/jishuzhanshi4.png',
+    '/geophysics/jishuzhanshi5.png',
+    '/geophysics/jishuzhanshi6.png',
+    '/geophysics/jishuzhanshi7.png',
+    '/geophysics/jishuzhanshi8.png',
+    '/geophysics/jishuzhanshi9.png',
+    '/geophysics/jishuzhanshi10.png',
+    '/geophysics/jishuzhanshi11.png',
+  ];
+</script>
+
+<template>
+  <div>
+    <!-- 首屏 -->
+    <div class="geophysics-bg w-full h-80vh">
+      <NavBar />
+      <h2 class="mb-5 text-center text-4xl leading-snug color-white pt-80">
+        专注AI促进地球物理数据衍生
+      </h2>
+    </div>
+    <!-- 行业背景 -->
+    <div class="industrial-bg w-full h-80vh">
+      <h2 class="mb-10 text-center text-4xl leading-snug pt-20">地球物理勘探</h2>
+      <n-tabs
+        type="segment"
+        trigger="hover"
+        animated
+        size="large"
+        justify-content="space-evenly"
+        class="w-300 m-auto"
+      >
+        <n-tab-pane name="行业背景" tab="行业背景">
+          <n-flex justify="center">
+            <n-card class="w-100 h-100 mr-5">
+              <p>
+                我国企业数字化转型是一项长期任务，企业数字化是推进信息化的最好方法，数字化带来了数据化，人工智能是企业实现智能化的主要途径。业务生产出数据、数据再反哺业务，从而整体推动企业数字化转型。企业数字化转型是一项长期任务，企业数字化是推进信息化的最好方法，数字化带来了数据化，人工智能是企业实现智能化的主要途径。业务生产出数据、数据再反哺业务，从而整体推动企业数字化转型。
+              </p>
+              <br />
+              <p>
+                截止至2018年我国数字经济规模达到31.3万亿元，按可比口径计算，名义增长20.9%，占GDP比重为34.8%，占比同比提升1.9个百分点，据相关机构预测，AI未来10年将创造16万亿美元？
+              </p>
+            </n-card>
+            <n-card class="flex-1" content-class="flex-center">
+              <img src="/geophysics/hangyebeijing1.png" />
+            </n-card>
+          </n-flex>
+        </n-tab-pane>
+        <n-tab-pane name="项目背景" tab="项目背景">
+          <n-flex justify="center">
+            <n-card class="w-100 h-100 mr-5">
+              <p>
+                地球物理勘探是探索地球本体及近地空间的介质结构、物质组成、形成和演化，研究与其相关的各种自然现象及其变化的规律。
+              </p>
+              <br />
+              <p>
+                在此基础上为探测地球内部结构与构造、寻找能源、资源和环境监测提供理论、方法和技术，为灾害预报提供重要依据，涵括石油、煤炭、金属矿场、水文、地质灾害等。
+              </p>
+            </n-card>
+            <n-card class="flex-1" content-class="flex-center">
+              <img src="/geophysics/xiangmubeijing2.png" class="h-80" />
+            </n-card>
+          </n-flex>
+        </n-tab-pane>
+        <n-tab-pane name="前景" tab="前景">
+          <n-flex justify="center">
+            <n-card class="w-100 h-100 mr-5">
+              <p>
+                主要研发方向：形成一套以SEGY格式管理且方便地球物理工作人员应用深度学习（网络）技术的大数据集合，并基于数据流形成SmartGeo智能工坊平台。
+              </p>
+              <br />
+              <p>
+                AI在物探领域的应用大多停留在实验室研发、测试阶段，少量已在市场主流软件中运用，在传统算力提升降速的情况下，作为长期受制于算力的信号处理运算行业，AI算力的飞速发展将极大程度推动物探行业提质增效。
+              </p>
+            </n-card>
+            <n-card class="flex-1" content-class="flex-center">
+              <img src="/geophysics/qianjing1.png " />
+            </n-card>
+          </n-flex>
+        </n-tab-pane>
+      </n-tabs>
+    </div>
+
+    <!-- 技术展示 研发领域 -->
+    <n-flex vertical class="w-full bg-#e6f3fe">
+      <h2 class="mb-5 text-center text-4xl leading-snug pt-20">技术展示</h2>
+      <Swiper
+        :effect="'coverflow'"
+        :grab-cursor="true"
+        :centered-slides="true"
+        :slides-per-view="'auto'"
+        :coverflow-effect="{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }"
+        :pagination="true"
+        :modules="[EffectCoverflow, Pagination]"
+        class="w-400 m-auto"
+      >
+        <SwiperSlide v-for="(item, index) in showList" :key="index">
+          <img class="carousel-img" :src="item" />
+        </SwiperSlide>
+      </Swiper>
+      <h2 class="mb-5 text-center text-4xl leading-snug pt-20">研发领域</h2>
+      <!-- <n-carousel autoplay draggable class="w-200 m-auto">
+        <n-carousel-item>
+          <img class="carousel-img" src="/geophysics/yanfa2.png" alt="" />
+        </n-carousel-item>
+        <n-carousel-item>
+          <img class="carousel-img" src="/geophysics/yanfa1.jpg" alt="" />
+        </n-carousel-item>
+      </n-carousel> -->
+      <Swiper
+        :effect="'cube'"
+        :grab-cursor="true"
+        :cube-effect="{
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        }"
+        :pagination="true"
+        :modules="[EffectCube, Pagination]"
+        class="w-200 m-auto"
+      >
+        <SwiperSlide>
+          <img class="carousel-img" src="/geophysics/yanfa2.png" alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img class="carousel-img" src="/geophysics/yanfa1.jpg" alt="" />
+        </SwiperSlide>
+      </Swiper>
+    </n-flex>
+
+    <!-- 底部 -->
+    <NavFooter />
+    <!-- 回到顶部 -->
+    <n-back-top :right="60" />
+  </div>
+</template>
+
+<style lang="scss" scoped>
+  .geophysics-bg {
+    background-image: url('../../assets/dengta.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .industrial-bg {
+    background-image: url('/geophysics/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .carousel-img {
+    width: 100%;
+    height: 400px;
+    // object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 800px;
+    height: 400px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+</style>
