@@ -1,4 +1,82 @@
+<!-- 公司简介 -->
 <script setup lang="ts">
+  // Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+  // Import Swiper styles
+  import 'swiper/css';
+  import 'swiper/css/effect-coverflow';
+  import 'swiper/css/pagination';
+  import 'swiper/css/effect-cube';
+  // import required modules
+  import { Pagination, EffectCube } from 'swiper/modules';
+
+  const technologyList = [
+    {
+      id: 1,
+      title: '初至自动拾取',
+      desc1: '数据多样性：地表多样性、激发源多样性、噪音多样性、GAN网络丰富样本、道输入改造样本',
+      desc2:
+        '样本标签标准库：沙漠、山前、火成岩过渡带、黄土源、南方山地、河堤小型震源，模型表现极高适应性',
+      img: [
+        '/geophysics/jishuzhanshi1.png',
+        '/geophysics/jishuzhanshi2.png',
+        '/geophysics/jishuzhanshi3.png',
+        '/geophysics/jishuzhanshi4.png',
+        '/geophysics/jishuzhanshi5.png',
+        '/geophysics/jishuzhanshi6.png',
+        '/geophysics/jishuzhanshi7.png',
+        '/geophysics/jishuzhanshi8.png',
+        '/geophysics/jishuzhanshi9.png',
+        '/geophysics/jishuzhanshi10.png',
+        '/geophysics/jishuzhanshi12.png',
+        '/geophysics/jishuzhanshi13.png',
+        '/geophysics/jishuzhanshi14.png',
+        '/geophysics/jishuzhanshi15.png',
+        '/geophysics/jishuzhanshi16.png',
+        '/geophysics/jishuzhanshi17.png',
+        '/geophysics/jishuzhanshi18.png',
+        '/geophysics/jishuzhanshi19.png',
+      ],
+    },
+    {
+      id: 2,
+      title: '层位预测工具',
+      desc1:
+        '通过多个工区，依次进行层位自动识别任务，把除去后几个层的网络权重保存下来，作为预训练模型，预训练模型可以提高新工区训练速度及预测精度。',
+      desc2: '预训练模型同时提升网络泛化能力。',
+      img: [
+        '/geophysics/cengweiyuche1.png',
+        '/geophysics/cengweiyuche2.png',
+        '/geophysics/cengweiyuche3.png',
+      ],
+    },
+    {
+      id: 3,
+      title: '预测策略',
+      desc1: '卡尔曼滤波3D曲面平滑 ',
+      desc2: ' ',
+      img: ['/geophysics/yusuanchelue1.jpg'],
+    },
+    {
+      id: 4,
+      title: '断裂识别工具',
+      desc1: '筹建断层标签库 ',
+      desc2: '断层识别内置3D模型&2D训练生产，与层位追踪类似，但断层标签难度大',
+      img: [
+        '/geophysics/duanlieshibie1.png',
+        '/geophysics/duanlieshibie2.png',
+        '/geophysics/duanlieshibie3.png',
+      ],
+    },
+    {
+      id: 3,
+      title: 'GeoLable地学标注工具',
+      desc1:
+        'GeoLabel地学标注工具为地球物理专用数据标记工具软件。可导入3D、2D图片数据格式(.segy, .jpg, .png, .jepg, 等格式类型)以及视频数据(.avi, .mp4等格式)。满足人工智能在视觉各个领域数据标注的需求，目标检测-矩形标注；语义分割，实例分割-多边形标注；分类-类别标注；标志点检测-控制点标注等等。',
+      desc2: ' ',
+      img: ['/geophysics/dixuebiaozhu1.png'],
+    },
+  ];
   const menuCard = [
     { id: 1, title: '公司简介', icon: 'i-line-md:home-simple', img: '/home.svg' },
     { id: 2, title: '社会责任', icon: 'i-line-md:weather-cloudy-loop', img: '/res.svg' },
@@ -36,7 +114,7 @@
     </div>
 
     <!-- 公司简介 -->
-    <div class="introduction-bg w-full h-80vh mb-20 relative">
+    <div class="introduction-bg w-full relative">
       <div class="flex-center w-400 m-auto mb-20 absolute top-0 left-50% -translate-50%">
         <n-card
           v-for="item in menuCard"
@@ -52,11 +130,11 @@
         </n-card>
       </div>
 
-      <div class="flex-center w-400 m-auto pt-40">
-        <div class="w-200 mr-20">
+      <div class="flex-center w-400 m-auto pt-30">
+        <div class="w-200 mr-20 mb-20">
           <img src="../../assets/gaolouigc1.png" class="w-10 h-10 mb-5" />
           <h2 class="text-3xl font-bold mb-10">融合AI <br />领域领跑企业</h2>
-          <div class="color-neutral-700 indent-md mb-20 text-lg">
+          <div class="color-neutral-700 indent-md mb-10 text-lg">
             <p>
               北京三油科技有限责任公司主要技术团队由具有留学背景的软件项目开发、AI算法及相关行业专家团队构成，专注人工智能在细分领域行业场景的深入，服务于企业数字化、智能化进程，用AI为传统企业技术赋能。
             </p>
@@ -67,6 +145,7 @@
               >北京三油科技致力致力于为传统企业提供数字化、智能化技术赋能，以波形、时深数据为主线，研发包括地震噪音去除、断裂识别、初至拾取、地震相识别等行业算法，同时服务智能制造企业数字化转型，包括企业计划管理及运用私域大模型技术对pdf相关语言类格式转置及关键要素提取等非结构化数据转结构化等算法项目。专注人工智能在细分领域的软件定制、前后端开发、平台搭建、私域大模型部署训练工程化方案等。专注AI，深耕垂直细分领域，为垂直细分行业企业数字化技术赋能。
             </p>
           </div>
+          <img src="../../assets/jishufuwu1.png" />
         </div>
         <div class="border-t border-#d2dce1 color-#11ccfa;">
           <n-grid :cols="2">
@@ -83,21 +162,59 @@
       </div>
     </div>
 
-    <!-- 发展战略 -->
-    <div class="strategy w-400 m-auto">
-      <div class="strategy-bg h-120 m-auto">
-        <p class="color-#6dc2e9 mb-5 text-center pt-20">发展战略</p>
-        <h2 class="text-center text-3xl font-bold mb-4 color-white">
-          整合 · 共享 · 创新 <br />
-          构建共融共生的AI商业生态 整体推动企业数字化转型
+    <!-- 技术预研 -->
+    <div class="technology m-auto">
+      <div class="technology-bg py-10">
+        <p class="color-#6dc2e9 mb-5 text-center">技术预研</p>
+        <h2 class="text-center text-3xl font-bold mb-5 color-white">
+          SmartGeo初至自动拾取<br />
+          基于深度学习的地震波初至自动拾取
         </h2>
-        <p class="color-#6dc2e9 mb-5 text-center indent-md m-auto pt-10 w-200">
-          公司主要技术团队由具有留学背景算法及石油行业专家团队构成，专注人工智能在石油石化场景的行业深入，服务于大型能源央企数字化、智能化进程，用AI为传统能源央企技术赋能。
-          细分领域为行业AI算法深度定制、石油煤炭物探、工程物探、水文、智慧城市、管道建设、炼化工业安全管控等方向AI算法落地深入。
-          倡导“专注、务实、高效、创新”的企业精神，通过良好的现代企业内部机制促进人工智能方向的算法创新。
+        <p class="color-#6dc2e9 mb-5 text-center indent-md m-auto">
+          推进公司完全知识产权的smartgeo系列物探工具软件商用化，切实做到专注AI促进地球物理数据衍生，为国家能源央企数字化智能化贡献力量。
+
           <br />
-          公司注册于中关村西区人才聚集地-同方科技广场，汇集清北、中科院优秀人才资源，来自中关村核心区的科技源动力。
+          以起跳为初至位置而不是第一个波谷或者波峰，多模态输入 -->
         </p>
+
+        <n-tabs
+          placement="left"
+          size="large"
+          type="line"
+          pane-style="padding: 0 50px"
+          tab-style="color: #fff"
+          class="m-auto w-300 h-170 p-5"
+        >
+          <n-tab-pane
+            v-for="item in technologyList"
+            :key="item.id"
+            :name="item.title"
+            :tab="item.title"
+          >
+            <p class="mb-5 color-white">
+              {{ item.desc1 }}
+              <br />
+              {{ item.desc2 }}
+            </p>
+            <Swiper
+              :effect="'cube'"
+              :grab-cursor="true"
+              :cube-effect="{
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+              }"
+              :pagination="true"
+              :modules="[EffectCube, Pagination]"
+              class="w-250 m-auto"
+            >
+              <SwiperSlide v-for="(subItem, index) in item.img" :key="index">
+                <img class="carousel-img" :src="subItem" />
+              </SwiperSlide>
+            </Swiper>
+          </n-tab-pane>
+        </n-tabs>
       </div>
     </div>
 
@@ -173,6 +290,24 @@
             <div class="bg-#F3F5F6 shadow shadow-gray-200 h-26 b-rd-1"></div>
           </n-grid-item>
         </n-grid>
+      </div>
+    </div>
+
+    <!-- 发展战略 -->
+    <div class="strategy m-auto">
+      <div class="strategy-bg h-120 m-auto">
+        <p class="color-#6dc2e9 mb-5 text-center pt-20">发展战略</p>
+        <h2 class="text-center text-3xl font-bold mb-4 color-white">
+          整合 · 共享 · 创新 <br />
+          构建共融共生的AI商业生态 整体推动企业数字化转型
+        </h2>
+        <p class="color-#6dc2e9 mb-5 text-center indent-md m-auto pt-10 w-200">
+          公司主要技术团队由具有留学背景算法及石油行业专家团队构成，专注人工智能在石油石化场景的行业深入，服务于大型能源央企数字化、智能化进程，用AI为传统能源央企技术赋能。
+          细分领域为行业AI算法深度定制、石油煤炭物探、工程物探、水文、智慧城市、管道建设、炼化工业安全管控等方向AI算法落地深入。
+          倡导“专注、务实、高效、创新”的企业精神，通过良好的现代企业内部机制促进人工智能方向的算法创新。
+          <br />
+          公司注册于中关村西区人才聚集地-同方科技广场，汇集清北、中科院优秀人才资源，来自中关村核心区的科技源动力。
+        </p>
       </div>
     </div>
 
@@ -257,6 +392,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #e8f1f5;
+  }
+  .technology-bg {
+    background-image: url('../../assets/zerenbaimg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .strategy-bg {
     background-image: url('../../assets/zhanlueimg.jpg');
