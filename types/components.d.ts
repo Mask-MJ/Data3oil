@@ -9,12 +9,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     NaiveProvider: (typeof import('./../src/components/common/NaiveProvider.vue'))['default'];
     NavBar: (typeof import('./../src/components/common/NavBar.vue'))['default'];
-    NavFoot: (typeof import('./../src/components/common/NavFoot.vue'))['default'];
     NavFooter: (typeof import('./../src/components/common/NavFooter.vue'))['default'];
     NBackTop: (typeof import('naive-ui'))['NBackTop'];
     NCard: (typeof import('naive-ui'))['NCard'];
     NCarousel: (typeof import('naive-ui'))['NCarousel'];
-    NCarouselItem: (typeof import('naive-ui'))['NCarouselItem'];
     NConfigProvider: (typeof import('naive-ui'))['NConfigProvider'];
     NDialogProvider: (typeof import('naive-ui'))['NDialogProvider'];
     NFlex: (typeof import('naive-ui'))['NFlex'];
