@@ -3,9 +3,9 @@
     { id: 'home', label: '首页', path: '/' },
     { id: 'about', label: '公司简介', path: '/about' },
     { id: 'case', label: '数字化转型案例', path: '/case' },
-    { id: 'geophysics', label: '地球物理板块', path: '/geophysics' },
-    { id: 'algorithm', label: '深度学习算法预研', path: '/algorithm' },
     { id: 'model', label: '大模型技术跟踪', path: '/model' },
+    { id: 'algorithm', label: '深度学习算法预研', path: '/algorithm' },
+    { id: 'geophysics', label: '地球物理板块', path: '/geophysics' },
     { id: 'news', label: '新闻资讯', path: '/news' },
   ];
   const scrollY = ref(0);

@@ -2,27 +2,53 @@
 <script setup lang="ts">
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
-
   // Import Swiper styles
   import 'swiper/css';
-
   import 'swiper/css/effect-coverflow';
   import 'swiper/css/pagination';
   import 'swiper/css/effect-cube';
+  import 'swiper/css/navigation';
   // import required modules
-  import { EffectCoverflow, Pagination, EffectCube } from 'swiper/modules';
+  import { EffectCoverflow, Pagination, EffectCube, Navigation } from 'swiper/modules';
   const showList = [
     '/geophysics/jishuzhanshi1.png',
     '/geophysics/jishuzhanshi2.png',
     '/geophysics/jishuzhanshi3.png',
     '/geophysics/jishuzhanshi4.png',
     '/geophysics/jishuzhanshi5.png',
-    '/geophysics/jishuzhanshi6.png',
     '/geophysics/jishuzhanshi7.png',
     '/geophysics/jishuzhanshi8.png',
     '/geophysics/jishuzhanshi9.png',
-    '/geophysics/jishuzhanshi10.png',
-    '/geophysics/jishuzhanshi11.png',
+    '/geophysics/jishuzhanshi17.png',
+    '/geophysics/jishuzhanshi18.png',
+    '/geophysics/jishuzhanshi19.png',
+  ];
+  const algorithmList = [
+    {
+      id: '01',
+      title: '关键点识别',
+      img: '/geophysics/suanfa1.png',
+    },
+    {
+      id: '02',
+      title: '目标检测',
+      img: '/geophysics/suanfa2.png',
+    },
+    {
+      id: '03',
+      title: '三维室内数据配准',
+      img: '/geophysics/suanfa3.png',
+    },
+    {
+      id: '04',
+      title: '语义分割',
+      img: '/geophysics/suanfa4.png',
+    },
+    {
+      id: '05',
+      title: '目标跟踪',
+      img: '/geophysics/suanfa5.mp4',
+    },
   ];
 </script>
 
@@ -96,9 +122,13 @@
         </n-tab-pane>
       </n-tabs>
     </div>
+    <!-- 项目路径 技术展示 研发领域 -->
+    <n-flex vertical class="w-full bg-#e6f3fe py-20">
+      <h2 class="mb-5 text-center text-4xl leading-snug">项目路径</h2>
+      <n-card class="flex-1 bg-#e6f3fe" content-class="flex-center">
+        <img src="/geophysics/xiangmulujing1.png" class="w-200" />
+      </n-card>
 
-    <!-- 技术展示 研发领域 -->
-    <n-flex vertical class="w-full bg-#e6f3fe">
       <h2 class="mb-5 text-center text-4xl leading-snug pt-20">技术展示</h2>
       <Swiper
         :effect="'coverflow'"
@@ -121,14 +151,6 @@
         </SwiperSlide>
       </Swiper>
       <h2 class="mb-5 text-center text-4xl leading-snug pt-20">研发领域</h2>
-      <!-- <n-carousel autoplay draggable class="w-200 m-auto">
-        <n-carousel-item>
-          <img class="carousel-img" src="/geophysics/yanfa2.png" alt="" />
-        </n-carousel-item>
-        <n-carousel-item>
-          <img class="carousel-img" src="/geophysics/yanfa1.jpg" alt="" />
-        </n-carousel-item>
-      </n-carousel> -->
       <Swiper
         :effect="'cube'"
         :grab-cursor="true"
@@ -149,7 +171,45 @@
           <img class="carousel-img" src="/geophysics/yanfa1.jpg" alt="" />
         </SwiperSlide>
       </Swiper>
+
+      <h2 class="mb-5 text-center text-4xl leading-snug pt-20">应用项</h2>
+      <n-card class="flex-1 bg-#e6f3fe" content-class="flex-center">
+        <img src="/geophysics/yingyongxiang1.png" class="w-200" />
+      </n-card>
     </n-flex>
+    <h2 class="mb-5 text-center text-4xl leading-snug pt-20">算法服务</h2>
+    <Swiper
+      :slides-per-view="3"
+      :centered-slides="true"
+      :space-between="30"
+      :pagination="{
+        type: 'fraction',
+      }"
+      :navigation="true"
+      :modules="[Pagination, Navigation]"
+      class="w-400 m-auto mb-20"
+    >
+      <SwiperSlide v-for="item in algorithmList" :key="item.id">
+        <img
+          v-if="item.title !== '目标跟踪'"
+          :src="item.img"
+          style="object-fit: cover"
+          class="w-full h-100"
+        />
+        <video
+          v-else
+          :src="item.img"
+          class="w-full h-100"
+          autoplay
+          muted
+          loop
+          type="video/mp4"
+          :style="{ transform: 'matrix(1, 0, 0, 1, 0, 0)', 'object-fit': 'cover' }"
+        >
+        </video>
+        <div class="text-xl font-bold px-10 pt-10">{{ item.title }}</div>
+      </SwiperSlide>
+    </Swiper>
 
     <!-- 底部 -->
     <NavFooter />
@@ -186,5 +246,14 @@
   .swiper-slide img {
     display: block;
     width: 100%;
+  }
+  .algorithm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    color: #fff;
   }
 </style>
