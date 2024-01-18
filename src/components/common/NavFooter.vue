@@ -34,12 +34,15 @@
 
 <template>
   <div class="footer w-100%">
+    <!-- 联系 -->
+    <Contact />
+    <!-- 底部 -->
     <div class="mx-80">
       <n-grid :x-gap="0" :y-gap="0" :cols="4">
         <n-grid-item :span="3">
           <div class="flex-between py-8 footer-line mb-8">
             <div class="flex-around">
-              <img src="../../assets/logo2.jpg" class="w-30 h-30 mr-15" />
+              <img src="/logo2.jpg" class="w-30 h-30 mr-15" />
               <div
                 class="w-35 h-12 px-5 bg-white flex-y-center font-bold flex-around text-lg b-rd-1 hover:translate-x-5 transition-all-500"
               >
@@ -91,15 +94,15 @@
           <div class="p-11 left-line">
             <div class="flex w-60 flex-wrap">
               <div class="w-25 mb-4 mr-4">
-                <img src="../../assets/logo2.jpg" class="h-25 mb-2" />
+                <img src="/logo2.jpg" class="h-25 mb-2" />
                 <span>三油科技官方微信公众号</span>
               </div>
               <div class="w-25 mb-4 mr-4">
-                <img src="../../assets/logo2.jpg" class="h-25 mb-2" />
+                <img src="/logo2.jpg" class="h-25 mb-2" />
                 <span>关注三油科技抖音官方号</span>
               </div>
               <div class="w-25 mb-4 mr-4">
-                <img src="../../assets/logo2.jpg" class="h-25 mb-2" />
+                <img src="/logo2.jpg" class="h-25 mb-2" />
                 <span>关注三油科技微博</span>
               </div>
             </div>
@@ -117,7 +120,7 @@
 
 <style lang="scss" scoped>
   .footer {
-    background: url('../../assets/foot-bg.jpg') no-repeat center;
+    background: url('/foot-bg.jpg') no-repeat center;
     background-size: cover;
     .footer-line {
       border-bottom: 1px solid rgba(161, 160, 160, 0.3);
@@ -127,6 +130,11 @@
     }
     .top-line {
       border-top: 1px solid rgba(161, 160, 160, 0.3);
+    }
+    .contact-bg {
+      background-image: url('/common/lianxi-bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 </style>

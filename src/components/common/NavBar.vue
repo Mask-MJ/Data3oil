@@ -2,7 +2,7 @@
   const menuOptions = [
     { id: 'home', label: '首页', path: '/' },
     { id: 'about', label: '公司简介', path: '/about' },
-    { id: 'case', label: '数字化转型案例', path: '/case' },
+    { id: 'digitalize', label: '数字化转型案例', path: '/digitalize' },
     { id: 'model', label: '大模型技术跟踪', path: '/model' },
     { id: 'algorithm', label: '深度学习算法预研', path: '/algorithm' },
     { id: 'geophysics', label: '地球物理板块', path: '/geophysics' },
@@ -26,7 +26,7 @@
     class="header w-full flex-center color-white hover:bg-white hover:color-black fixed top-0 transition-500"
     :class="scrollY && 'bg-white color-black! z-999'"
   >
-    <img class="w-20 h-20" src="../../assets/logo.jpg" alt="" />
+    <img class="w-20 h-20" src="/logo.jpg" alt="" />
     <ul class="item w-250 flex-center">
       <li v-for="item in menuOptions" :key="item.id" class="mx-4 text-lg">
         <router-link :to="item.path">
