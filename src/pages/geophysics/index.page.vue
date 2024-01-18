@@ -10,6 +10,7 @@
   import 'swiper/css/navigation';
   // import required modules
   import { EffectCoverflow, Pagination, EffectCube, Navigation } from 'swiper/modules';
+
   const showList = [
     '/geophysics/jishuzhanshi1.png',
     '/geophysics/jishuzhanshi2.png',
@@ -50,12 +51,41 @@
       img: '/geophysics/suanfa5.mp4',
     },
   ];
+  const industrialList = [
+    {
+      id: 1,
+      title: '行业背景',
+      desc1:
+        '我国企业数字化转型是一项长期任务，企业数字化是推进信息化的最好方法，数字化带来了数据化，人工智能是企业实现智能化的主要途径。业务生产出数据、数据再反哺业务，从而整体推动企业数字化转型。企业数字化转型是一项长期任务，企业数字化是推进信息化的最好方法，数字化带来了数据化，人工智能是企业实现智能化的主要途径。业务生产出数据、数据再反哺业务，从而整体推动企业数字化转型。',
+      desc2:
+        '截止至2018年我国数字经济规模达到31.3万亿元，按可比口径计算，名义增长20.9%，占GDP比重为34.8%，占比同比提升1.9个百分点，据相关机构预测，AI未来10年将创造16万亿美元？',
+      img: '/geophysics/hangyebeijing1.png',
+    },
+    {
+      id: 2,
+      title: '项目背景',
+      desc1:
+        '地球物理勘探是探索地球本体及近地空间的介质结构、物质组成、形成和演化，研究与其相关的各种自然现象及其变化的规律。',
+      desc2:
+        '在此基础上为探测地球内部结构与构造、寻找能源、资源和环境监测提供理论、方法和技术，为灾害预报提供重要依据，涵括石油、煤炭、金属矿场、水文、地质灾害等。',
+      img: '/geophysics/xiangmubeijing2.png',
+    },
+    {
+      id: 3,
+      title: '前景',
+      desc1:
+        '主要研发方向：形成一套以SEGY格式管理且方便地球物理工作人员应用深度学习（网络）技术的大数据集合，并基于数据流形成SmartGeo智能工坊平台。',
+      desc2:
+        'AI在物探领域的应用大多停留在实验室研发、测试阶段，少量已在市场主流软件中运用，在传统算力提升降速的情况下，作为长期受制于算力的信号处理运算行业，AI算力的飞速发展将极大程度推动物探行业提质增效。',
+      img: '/geophysics/qianjing1.png',
+    },
+  ];
 </script>
 
 <template>
   <div>
     <!-- 首屏 -->
-    <div class="geophysics-bg w-full h-80vh">
+    <div class="first-screen-bg w-full h-100vh">
       <NavBar />
       <h2 class="mb-5 text-center text-4xl leading-snug color-white pt-80">
         专注AI促进地球物理数据衍生
@@ -72,51 +102,20 @@
         justify-content="space-evenly"
         class="w-300 m-auto"
       >
-        <n-tab-pane name="行业背景" tab="行业背景">
+        <n-tab-pane
+          v-for="item in industrialList"
+          :key="item.id"
+          :name="item.title"
+          :tab="item.title"
+        >
           <n-flex justify="center">
             <n-card class="w-100 h-100 mr-5">
-              <p>
-                我国企业数字化转型是一项长期任务，企业数字化是推进信息化的最好方法，数字化带来了数据化，人工智能是企业实现智能化的主要途径。业务生产出数据、数据再反哺业务，从而整体推动企业数字化转型。企业数字化转型是一项长期任务，企业数字化是推进信息化的最好方法，数字化带来了数据化，人工智能是企业实现智能化的主要途径。业务生产出数据、数据再反哺业务，从而整体推动企业数字化转型。
-              </p>
+              <p> {{ item.desc1 }}</p>
               <br />
-              <p>
-                截止至2018年我国数字经济规模达到31.3万亿元，按可比口径计算，名义增长20.9%，占GDP比重为34.8%，占比同比提升1.9个百分点，据相关机构预测，AI未来10年将创造16万亿美元？
-              </p>
+              <p> {{ item.desc2 }}</p>
             </n-card>
             <n-card class="flex-1" content-class="flex-center">
-              <img src="/geophysics/hangyebeijing1.png" />
-            </n-card>
-          </n-flex>
-        </n-tab-pane>
-        <n-tab-pane name="项目背景" tab="项目背景">
-          <n-flex justify="center">
-            <n-card class="w-100 h-100 mr-5">
-              <p>
-                地球物理勘探是探索地球本体及近地空间的介质结构、物质组成、形成和演化，研究与其相关的各种自然现象及其变化的规律。
-              </p>
-              <br />
-              <p>
-                在此基础上为探测地球内部结构与构造、寻找能源、资源和环境监测提供理论、方法和技术，为灾害预报提供重要依据，涵括石油、煤炭、金属矿场、水文、地质灾害等。
-              </p>
-            </n-card>
-            <n-card class="flex-1" content-class="flex-center">
-              <img src="/geophysics/xiangmubeijing2.png" class="h-80" />
-            </n-card>
-          </n-flex>
-        </n-tab-pane>
-        <n-tab-pane name="前景" tab="前景">
-          <n-flex justify="center">
-            <n-card class="w-100 h-100 mr-5">
-              <p>
-                主要研发方向：形成一套以SEGY格式管理且方便地球物理工作人员应用深度学习（网络）技术的大数据集合，并基于数据流形成SmartGeo智能工坊平台。
-              </p>
-              <br />
-              <p>
-                AI在物探领域的应用大多停留在实验室研发、测试阶段，少量已在市场主流软件中运用，在传统算力提升降速的情况下，作为长期受制于算力的信号处理运算行业，AI算力的飞速发展将极大程度推动物探行业提质增效。
-              </p>
-            </n-card>
-            <n-card class="flex-1" content-class="flex-center">
-              <img src="/geophysics/qianjing1.png " />
+              <img :src="item.img" class="h-80" />
             </n-card>
           </n-flex>
         </n-tab-pane>
@@ -190,6 +189,7 @@
       class="w-400 m-auto mb-20"
     >
       <SwiperSlide v-for="item in algorithmList" :key="item.id">
+        <div class="text-xl font-bold pb-5 text-center">{{ item.title }}</div>
         <img
           v-if="item.title !== '目标跟踪'"
           :src="item.img"
@@ -207,7 +207,6 @@
           :style="{ transform: 'matrix(1, 0, 0, 1, 0, 0)', 'object-fit': 'cover' }"
         >
         </video>
-        <div class="text-xl font-bold px-10 pt-10">{{ item.title }}</div>
       </SwiperSlide>
     </Swiper>
 
@@ -219,13 +218,13 @@
 </template>
 
 <style lang="scss" scoped>
-  .geophysics-bg {
-    background-image: url('../../assets/dengta.jpg');
+  .first-screen-bg {
+    background-image: url('/FirstScreenBG/dengta.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
   .industrial-bg {
-    background-image: url('/geophysics/bg1.jpg');
+    background-image: url('/common/bg1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }

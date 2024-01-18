@@ -101,7 +101,7 @@
   <div>
     <!-- 首屏 -->
     <div class="screen">
-      <img src="../../assets/beijinh1.webp" class="w-full h-80vh" />
+      <img src="/FirstScreenBG/beijing1.webp" class="w-full h-80vh" />
       <NavBar />
       <div class="absolute top-20% left-20% -translate-50% color-white">
         <p class="mb-5 text-center text-4xl leading-snug">
@@ -132,7 +132,7 @@
 
       <div class="flex-center w-400 m-auto pt-30">
         <div class="w-200 mr-20 mb-20">
-          <img src="../../assets/gaolouigc1.png" class="w-10 h-10 mb-5" />
+          <img src="/icon/gaolouigc1.png" class="w-10 h-10 mb-5" />
           <h2 class="text-3xl font-bold mb-10">融合AI <br />领域领跑企业</h2>
           <div class="color-neutral-700 indent-md mb-10 text-lg">
             <p>
@@ -145,7 +145,7 @@
               >北京三油科技致力致力于为传统企业提供数字化、智能化技术赋能，以波形、时深数据为主线，研发包括地震噪音去除、断裂识别、初至拾取、地震相识别等行业算法，同时服务智能制造企业数字化转型，包括企业计划管理及运用私域大模型技术对pdf相关语言类格式转置及关键要素提取等非结构化数据转结构化等算法项目。专注人工智能在细分领域的软件定制、前后端开发、平台搭建、私域大模型部署训练工程化方案等。专注AI，深耕垂直细分领域，为垂直细分行业企业数字化技术赋能。
             </p>
           </div>
-          <img src="../../assets/jishufuwu1.png" />
+          <img src="/about/jishufuwu1.png" />
         </div>
         <div class="border-t border-#d2dce1 color-#11ccfa;">
           <n-grid :cols="2">
@@ -164,15 +164,14 @@
 
     <!-- 技术预研 -->
     <div class="technology m-auto">
-      <div class="technology-bg py-10">
-        <p class="color-#6dc2e9 mb-5 text-center">技术预研</p>
+      <div class="technology-bg py-10 color-#6dc2e9">
+        <p class="mb-5 text-center">技术预研</p>
         <h2 class="text-center text-3xl font-bold mb-5 color-white">
           SmartGeo初至自动拾取<br />
           基于深度学习的地震波初至自动拾取
         </h2>
-        <p class="color-#6dc2e9 mb-5 text-center indent-md m-auto">
+        <p class="mb-5 indent-md text-center">
           推进公司完全知识产权的smartgeo系列物探工具软件商用化，切实做到专注AI促进地球物理数据衍生，为国家能源央企数字化智能化贡献力量。
-
           <br />
           以起跳为初至位置而不是第一个波谷或者波峰，多模态输入 -->
         </p>
@@ -232,14 +231,14 @@
           <n-grid-item :span="2">
             <div class="bg-#F3F5F6 shadow shadow-gray-200 h-26 b-rd-1 flex-between px-5">
               <div> <p class="text-lg font-bold mb-2">企业愿景</p> <p>xxxxx</p> </div>
-              <div><img src="../../assets/wenhua1.png" alt="" /></div>
+              <div><img src="/icon/wenhua1.png" alt="" /></div>
             </div>
           </n-grid-item>
           <n-grid-item :span="4"> </n-grid-item>
           <n-grid-item :span="2">
             <div class="bg-#F3F5F6 shadow shadow-gray-200 h-26 b-rd-1 flex-between px-5">
               <div> <p class="text-lg font-bold mb-2">战略定位</p> <p>xxxxx</p> </div>
-              <div><img src="../../assets/wenhua2.png" alt="" /></div>
+              <div><img src="/icon/wenhua2.png" alt="" /></div>
             </div>
           </n-grid-item>
           <n-grid-item> </n-grid-item>
@@ -252,7 +251,7 @@
           <n-grid-item :span="2">
             <div class="bg-#F3F5F6 shadow shadow-gray-200 h-26 b-rd-1 flex-between px-5">
               <div> <p class="text-lg font-bold mb-2">经营思想</p> <p>xxxxx</p> </div>
-              <div><img src="../../assets/wenhua3.png" alt="" /></div>
+              <div><img src="/icon/wenhua3.png" alt="" /></div>
             </div>
           </n-grid-item>
           <n-grid-item> </n-grid-item>
@@ -260,7 +259,7 @@
           <n-grid-item :span="2">
             <div class="bg-#F3F5F6 shadow shadow-gray-200 h-26 b-rd-1 flex-between px-5">
               <div> <p class="text-lg font-bold mb-2">企业精神</p> <p>xxxxx</p> </div>
-              <div><img src="../../assets/wenhua4.png" alt="" /></div>
+              <div><img src="/icon/wenhua4.png" alt="" /></div>
             </div>
           </n-grid-item>
           <n-grid-item> </n-grid-item>
@@ -276,7 +275,7 @@
           <n-grid-item :span="2">
             <div class="bg-#F3F5F6 shadow shadow-gray-200 h-26 b-rd-1 flex-between px-5">
               <div> <p class="text-lg font-bold mb-2">企业使命</p> <p>xxxxx</p> </div>
-              <div><img src="../../assets/wenhua5.png" alt="" /></div>
+              <div><img src="/icon/wenhua5.png" alt="" /></div>
             </div>
           </n-grid-item>
           <n-grid-item> </n-grid-item>
@@ -294,17 +293,18 @@
     </div>
 
     <!-- 发展战略 -->
-    <div class="strategy m-auto">
-      <div class="strategy-bg h-120 m-auto">
-        <p class="color-#6dc2e9 mb-5 text-center pt-20">发展战略</p>
-        <h2 class="text-center text-3xl font-bold mb-4 color-white">
+    <div class="flex-center">
+      <div class="strategy-bg w-full h-140 py-20 color-#6dc2e9 text-center">
+        <p class="mb-10">发展战略</p>
+        <h2 class="text-center text-3xl font-bold color-white mb-10">
           整合 · 共享 · 创新 <br />
           构建共融共生的AI商业生态 整体推动企业数字化转型
         </h2>
-        <p class="color-#6dc2e9 mb-5 text-center indent-md m-auto pt-10 w-200">
+        <p class="indent-md w-400 m-auto">
           公司主要技术团队由具有留学背景算法及石油行业专家团队构成，专注人工智能在石油石化场景的行业深入，服务于大型能源央企数字化、智能化进程，用AI为传统能源央企技术赋能。
           细分领域为行业AI算法深度定制、石油煤炭物探、工程物探、水文、智慧城市、管道建设、炼化工业安全管控等方向AI算法落地深入。
           倡导“专注、务实、高效、创新”的企业精神，通过良好的现代企业内部机制促进人工智能方向的算法创新。
+          <br />
           <br />
           公司注册于中关村西区人才聚集地-同方科技广场，汇集清北、中科院优秀人才资源，来自中关村核心区的科技源动力。
         </p>
@@ -373,7 +373,8 @@
         </n-timeline>
       </div>
     </div>
-
+    <!-- 联系 -->
+    <!-- <Contact /> -->
     <!-- 底部 -->
     <NavFooter />
     <!-- 回到顶部 -->
@@ -383,33 +384,32 @@
 
 <style lang="scss" scoped>
   .ai-bg-active {
-    background-image: url('../../assets/contacebagimfe1.png');
+    background-image: url('/common/contacebagimfe1.png');
     background-repeat: no-repeat;
     background-size: cover;
   }
   .introduction-bg {
-    background-image: url('../../assets/shijian-bg.jpg');
+    background-image: url('/common/shijian-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #e8f1f5;
   }
   .technology-bg {
-    background-image: url('../../assets/zerenbaimg1.jpg');
+    background-image: url('/common/zhanlueimg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
   .strategy-bg {
-    background-image: url('../../assets/zhanlueimg.jpg');
+    background-image: url('/common/zerenbaimg1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
   .culture-bg {
-    background-image: url('../../assets/wenhuabag1.jpg');
+    background-image: url('/common/wenhuabag1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
   .time-line-bg {
-    background-image: url('../../assets/lingyubag1.png');
+    background-image: url('/common/lingyubag1.png');
     background-repeat: no-repeat;
     background-size: cover;
   }

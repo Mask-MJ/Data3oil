@@ -3,19 +3,19 @@
     {
       id: 1,
       title: '大数据',
-      img: '/qiyeshuzihua1.png',
+      img: '/icon/qiyeshuzihua1.png',
       desc: '致力于为传统企业提供数字化、智能化技术赋能，以波形、时深数据为主线，研发包括地震噪音去除、断裂识别、初至拾取、地震相识别等行业算法。',
     },
     {
       id: 2,
       title: '大模型',
-      img: '/rengongzhineng2.png',
+      img: '/icon/rengongzhineng2.png',
       desc: '专注人工智能在细分领域的软件定制、前后端开发、平台搭建、私域大模型部署训练工程化方案等。专注AI，深耕垂直细分领域，为垂直细分行业企业数字化技术赋能。',
     },
     {
       id: 3,
       title: '多模态',
-      img: '/ronghe3.png',
+      img: '/icon/ronghe3.png',
       desc: '服务智能制造企业数字化转型，包括企业计划管理及运用私域大模型技术对pdf相关语言类格式转置及关键要素提取等非结构化数据转结构化等算法项目。',
     },
   ];
@@ -62,7 +62,7 @@
     <div class="screen">
       <video
         class="video"
-        src="../assets/bannrvideo.mp4"
+        src="/FirstScreenBG/bannrvideo.mp4"
         autoplay
         muted
         loop
@@ -79,7 +79,7 @@
           打造最好的行业融合AI公司
         </p>
         <div class="flex-center">
-          <img src="../assets/banner-icon.svg" class="banner-icon w-4 h-12" />
+          <img src="/banner-icon.svg" class="banner-icon w-4 h-12" />
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@
         </h2>
         <p class="color-#333"> 了解更多 > </p>
       </div>
-      <div class="flex w-250 m-auto">
+      <div class="flex w-400 h-100 m-auto">
         <div
           v-for="item in businessEcologyList"
           :key="item.id"
@@ -162,7 +162,7 @@
       <n-grid :x-gap="20" :y-gap="16" :cols="3">
         <n-grid-item :span="2">
           <n-carousel autoplay draggable class="b-rd-2">
-            <img class="carousel-img" src="../assets/xibao.png" />
+            <img class="carousel-img" src="/home/xibao.png" />
             <img
               class="carousel-img"
               src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
@@ -217,18 +217,9 @@
       <h2 class="text-3xl font-bold mb-10">大模型技术跟踪</h2>
       <div class="h-100 border border-#999">内容占位</div>
     </div>
+
     <!-- 联系 -->
-    <div class="contact-bg w-full h-80 flex-center">
-      <div class="py-5 w-150 color-white">
-        <div class="text-4xl font-bold mb-10 text-center"> 和我们的专家聊聊您的项目？ </div>
-        <div class="mb-10 text-center">了解我们如何为专为您提供优质服务</div>
-        <div
-          class="w-50 h-15 border m-auto cursor-pointer border-white text-lg b-rd-1 flex-center text-center"
-        >
-          立即咨询
-        </div>
-      </div>
-    </div>
+
     <!-- 底部占位 -->
     <NavFooter />
     <!-- 回到顶部 -->
@@ -264,7 +255,7 @@
   }
 
   .business-ecology {
-    background: url('../assets/homabtbag1.jpg') no-repeat center;
+    background: url('/common/homabtbag1.jpg') no-repeat center;
     background-size: cover;
     .image {
       border-radius: 50%;
@@ -284,14 +275,14 @@
       -webkit-box-orient: vertical;
     }
     .business-ecology-active {
-      background-image: url(../assets/indfwfmfwzz.gif);
+      background-image: url(/common/indfwfmfwzz.gif);
       background-repeat: no-repeat;
       background-size: cover;
     }
   }
 
   .company-introduction {
-    background: url('../assets/gongsijieshao.jpg') no-repeat center;
+    background: url('/common/gongsijieshao.jpg') no-repeat center;
     background-size: cover;
   }
   .news {
@@ -349,10 +340,5 @@
     .news-item:hover .news-line::after {
       width: 100%;
     }
-  }
-  .contact-bg {
-    background-image: url('../assets/lianxi-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 </style>
