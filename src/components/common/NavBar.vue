@@ -3,7 +3,7 @@
     { id: 'home', label: '首页', path: '/' },
     { id: 'about', label: '公司简介', path: '/about' },
     { id: 'digitalize', label: '数字化转型案例', path: '/digitalize' },
-    { id: 'model', label: '大模型技术跟踪', path: '/model' },
+    { id: 'outerModel', label: '大模型技术跟踪', path: '/outerModel' },
     { id: 'algorithm', label: '深度学习算法预研', path: '/algorithm' },
     { id: 'geophysics', label: '地球物理板块', path: '/geophysics' },
     { id: 'news', label: '新闻资讯', path: '/news' },
@@ -23,8 +23,8 @@
 
 <template>
   <div
-    class="header w-full flex-center color-white hover:bg-white hover:color-black fixed top-0 transition-500"
-    :class="scrollY && 'bg-white color-black! z-999'"
+    class="header w-full flex-center color-white hover:bg-white hover:color-black fixed top-0 transition-500 z-999"
+    :class="scrollY && 'bg-white color-black! '"
   >
     <img class="w-20 h-20" src="/logo.jpg" alt="" />
     <ul class="item w-250 flex-center">
