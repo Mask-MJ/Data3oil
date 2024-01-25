@@ -145,15 +145,15 @@
       <h2 class="mb-5 text-center text-4xl leading-snug color-white pt-80"> 数字化转型案例 </h2>
     </div>
     <!-- 行业背景 -->
-    <div class="industrial-bg w-full h-80vh">
-      <h2 class="mb-10 text-center text-4xl leading-snug pt-20">数字化转型案例</h2>
+    <div class="industrial-bg w-full h-80vh m-auto py-20">
+      <h2 class="mb-10 text-center text-4xl leading-snug">数字化转型案例</h2>
       <n-tabs
         type="segment"
         trigger="hover"
         animated
         size="large"
         justify-content="space-evenly"
-        class="w-300 m-auto"
+        class="w-400 m-auto"
       >
         <n-tab-pane
           v-for="item in industrialList"
@@ -162,7 +162,7 @@
           :tab="item.title"
         >
           <n-flex justify="center">
-            <n-card class="w-100 h-100 mr-5">
+            <n-card class="w-100 h-150 mr-5">
               <p> {{ item.desc1 }}</p>
               <br />
               <p> {{ item.desc2 }}</p>
@@ -183,7 +183,7 @@
         </div>
 
         <div class="pb-10">
-          <!-- 蓝色背景 -->
+          <!-- 蓝色渐变背景 -->
           <div class="w-400 h-8 bg-gradient-to-r from-cyan-200 to-blue-400 m-auto b-rd-5"> </div>
           <!-- card1 -->
           <div class="flex-center text-center">
