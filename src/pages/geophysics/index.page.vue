@@ -6,10 +6,8 @@
   import 'swiper/css';
   import 'swiper/css/effect-coverflow';
   import 'swiper/css/pagination';
-  import 'swiper/css/effect-cube';
-  import 'swiper/css/navigation';
   // import required modules
-  import { EffectCoverflow, Pagination, EffectCube, Navigation } from 'swiper/modules';
+  import { EffectCoverflow, Pagination } from 'swiper/modules';
 
   const showList = [
     '/geophysics/jishuzhanshi1.png',
@@ -24,33 +22,7 @@
     '/geophysics/jishuzhanshi18.png',
     '/geophysics/jishuzhanshi19.png',
   ];
-  const algorithmList = [
-    {
-      id: '01',
-      title: '关键点识别',
-      img: '/geophysics/suanfa1.png',
-    },
-    {
-      id: '02',
-      title: '目标检测',
-      img: '/geophysics/suanfa2.png',
-    },
-    {
-      id: '03',
-      title: '三维室内数据配准',
-      img: '/geophysics/suanfa3.png',
-    },
-    {
-      id: '04',
-      title: '语义分割',
-      img: '/geophysics/suanfa4.png',
-    },
-    {
-      id: '05',
-      title: '目标跟踪',
-      img: '/geophysics/suanfa5.mp4',
-    },
-  ];
+
   const industrialList = [
     {
       id: 1,
@@ -80,6 +52,74 @@
       img: '/geophysics/qianjing1.png',
     },
   ];
+  const mockData = [
+    {
+      id: 1,
+      title: '标题',
+      subtitle: '小标题',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze4.jpg',
+      img2: '/common/wanshanimgfaze1.jpg',
+      icon1: '/icon/mokuai1.png',
+    },
+    {
+      id: 2,
+      title: '标题',
+      subtitle: '小标题',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze1.jpg',
+      img2: '/common/wanshanimgfaze4.jpg',
+      icon1: '/icon/mokuai2.png',
+    },
+    {
+      id: 3,
+      title: '标题',
+      subtitle: '小标题',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze4.jpg',
+      img2: '/common/wanshanimgfaze1.jpg',
+      icon1: '/icon/mokuai3.png',
+    },
+    {
+      id: 4,
+      title: '标题',
+      subtitle: '小标题',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze1.jpg',
+      img2: '/common/wanshanimgfaze4.jpg',
+      icon1: '/icon/mokuai4.png',
+    },
+    {
+      id: 5,
+      title: '标题',
+      subtitle: '小标题',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述  内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze4.jpg',
+      img2: '/common/wanshanimgfaze1.jpg',
+      icon1: '/icon/mokuai5.png',
+    },
+    {
+      id: 6,
+      title: '标题',
+      subtitle: '小标题',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze1.jpg',
+      img2: '/common/wanshanimgfaze4.jpg',
+      icon1: '/icon/mokuai6.png',
+    },
+  ];
 </script>
 
 <template>
@@ -91,44 +131,131 @@
         专注AI促进地球物理数据衍生
       </h2>
     </div>
-    <!-- 行业背景 -->
-    <div class="industrial-bg w-full h-80vh">
-      <h2 class="mb-10 text-center text-4xl leading-snug pt-20">地球物理勘探</h2>
-      <n-tabs
-        type="segment"
-        trigger="hover"
-        animated
-        size="large"
-        justify-content="space-evenly"
-        class="w-300 m-auto"
-      >
-        <n-tab-pane
-          v-for="item in industrialList"
-          :key="item.id"
-          :name="item.title"
-          :tab="item.title"
+    <!-- card1 行业背景 -->
+    <div class="industrial-bg w-full h-80vh py-20">
+      <div class="w-400 m-auto">
+        <h2 class="text-center text-4xl leading-snug pb-10">地球物理勘探</h2>
+        <n-tabs
+          type="segment"
+          trigger="hover"
+          animated
+          size="large"
+          justify-content="space-evenly"
+          class="w-400 h-200 m-auto"
         >
-          <n-flex justify="center">
-            <n-card class="w-100 h-100 mr-5">
-              <p> {{ item.desc1 }}</p>
-              <br />
-              <p> {{ item.desc2 }}</p>
-            </n-card>
-            <n-card class="flex-1" content-class="flex-center">
-              <img :src="item.img" class="h-80" />
-            </n-card>
-          </n-flex>
-        </n-tab-pane>
-      </n-tabs>
+          <n-tab-pane
+            v-for="item in industrialList"
+            :key="item.id"
+            :name="item.title"
+            :tab="item.title"
+          >
+            <n-flex>
+              <n-card class="w-100 h-150 mr-5">
+                <p> {{ item.desc1 }}</p>
+                <br />
+                <p> {{ item.desc2 }}</p>
+              </n-card>
+              <n-card class="flex-1">
+                <img :src="item.img" class="h-90" />
+              </n-card>
+            </n-flex>
+          </n-tab-pane>
+        </n-tabs>
+      </div>
     </div>
-    <!-- 项目路径 技术展示 研发领域 -->
+    <!-- card2  -->
     <n-flex vertical class="w-full bg-#e6f3fe py-20">
-      <h2 class="mb-5 text-center text-4xl leading-snug">项目路径</h2>
-      <n-card class="flex-1 bg-#e6f3fe" content-class="flex-center">
-        <img src="/geophysics/xiangmulujing1.png" class="w-200" />
-      </n-card>
-
-      <h2 class="mb-5 text-center text-4xl leading-snug pt-20">技术展示</h2>
+      <div class="w-400 m-auto">
+        <h2 class="mb-10 text-center text-4xl leading-snug">标题</h2>
+        <div class="w-400 m-auto flex-center flex-wrap">
+          <div
+            v-for="(item, index) in mockData"
+            :key="item.id"
+            class="flex-center overflow-hidden text-center mb-10"
+          >
+            <div class="w-105 h-60 border border-white b-rd-3 card2-bg">
+              <div
+                class="bg-lightblue-600 w-20 h-20 b-rd-50% text-xl m-auto flex-end pb-2 color-white -mt-10 mb-10"
+              >
+                {{ `0${item.id}` }}
+              </div>
+              <h3 class="text-2xl mb-5">{{ item.title }}</h3>
+              <p class="color-#666">描述描述描述</p>
+            </div>
+            <img
+              v-if="![2, 5].includes(index)"
+              src="/common/jiantouimg.png"
+              class="mx-10 w-17 h-100%"
+            />
+          </div>
+        </div>
+      </div>
+    </n-flex>
+    <!-- card3  -->
+    <div class="w-400 m-auto py-20">
+      <h2 class="mb-5 text-center text-4xl">标题111111</h2>
+      <n-grid :x-gap="24" :y-gap="24" :cols="2" class="">
+        <n-grid-item :span="1" class="bg-#d9eafb flex p-10 h-100 imghover transition-all-500">
+          <span class="text-8xl text-center color-white mr-15">01.</span>
+          <div class="w-120">
+            <h3 class="text-2xl mb-5">标题</h3>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666 mb-10">描述</p>
+            <p class="color-#666">欢迎咨询 ></p>
+          </div>
+        </n-grid-item>
+        <n-grid-item :span="1" class="bg-#d9eafb flex p-10 h-100 imghover transition-all-500">
+          <span class="text-8xl text-center color-white mr-15">02.</span>
+          <div class="w-120">
+            <h3 class="text-2xl leading-snug mb-5">标题</h3>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666 mb-10">描述</p>
+            <p class="color-#666">欢迎咨询 ></p>
+          </div>
+        </n-grid-item>
+        <n-grid-item :span="1" class="bg-#d9eafb flex p-10 h-100 imghover transition-all-500">
+          <span class="text-8xl text-center color-white mr-15">03.</span>
+          <div class="w-120">
+            <h3 class="text-2xl leading-snug mb-5">标题</h3>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666 mb-10">描述</p>
+            <p class="color-#666">欢迎咨询 ></p>
+          </div>
+        </n-grid-item>
+        <n-grid-item :span="1" class="bg-#d9eafb flex p-10 h-100 imghover transition-all-500">
+          <span class="text-8xl text-center color-white mr-15">04.</span>
+          <div class="w-120">
+            <h3 class="text-2xl leading-snug mb-5">标题</h3>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666">描述</p>
+            <p class="color-#666 mb-10">描述</p>
+            <p class="color-#666">欢迎咨询 ></p>
+          </div>
+        </n-grid-item>
+      </n-grid>
+    </div>
+    <!-- card4  -->
+    <div class="py-20 mb-20">
+      <h2 class="mb-5 text-center text-4xl leading-snug">标题</h2>
       <Swiper
         :effect="'coverflow'"
         :grab-cursor="true"
@@ -149,34 +276,9 @@
           <img class="carousel-img" :src="item" />
         </SwiperSlide>
       </Swiper>
-      <h2 class="mb-5 text-center text-4xl leading-snug pt-20">研发领域</h2>
-      <Swiper
-        :effect="'cube'"
-        :grab-cursor="true"
-        :cube-effect="{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        }"
-        :pagination="true"
-        :modules="[EffectCube, Pagination]"
-        class="w-200 m-auto"
-      >
-        <SwiperSlide>
-          <img class="carousel-img" src="/geophysics/yanfa2.png" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img class="carousel-img" src="/geophysics/yanfa1.jpg" alt="" />
-        </SwiperSlide>
-      </Swiper>
+    </div>
 
-      <h2 class="mb-5 text-center text-4xl leading-snug pt-20">应用项</h2>
-      <n-card class="flex-1 bg-#e6f3fe" content-class="flex-center">
-        <img src="/geophysics/yingyongxiang1.png" class="w-200" />
-      </n-card>
-    </n-flex>
-    <h2 class="mb-5 text-center text-4xl leading-snug pt-20">算法服务</h2>
+    <!-- <h2 class="mb-5 text-center text-4xl leading-snug pt-20">算法服务</h2>
     <Swiper
       :slides-per-view="3"
       :centered-slides="true"
@@ -194,7 +296,7 @@
           v-if="item.title !== '目标跟踪'"
           :src="item.img"
           style="object-fit: cover"
-          class="w-full h-100"
+          class="w-full h-200"
         />
         <video
           v-else
@@ -208,7 +310,28 @@
         >
         </video>
       </SwiperSlide>
-    </Swiper>
+    </Swiper> -->
+    <!-- <h2 class="mb-5 text-center text-4xl leading-snug pt-20">标题1111111</h2>
+    <Swiper
+      :effect="'cube'"
+      :grab-cursor="true"
+      :cube-effect="{
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      }"
+      :pagination="true"
+      :modules="[EffectCube, Pagination]"
+      class="w-200 m-auto"
+    >
+      <SwiperSlide>
+        <img class="carousel-img" src="/geophysics/yanfa2.png" alt="" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img class="carousel-img" src="/geophysics/yanfa1.jpg" alt="" />
+      </SwiperSlide>
+    </Swiper> -->
 
     <!-- 底部 -->
     <NavFooter />
@@ -228,13 +351,32 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .card2-bg {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  .jiantou::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -80px;
+    background-image: url('/common/jiantouimg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .carousel-img {
     width: 100%;
     height: 400px;
     // object-fit: cover;
     transition: transform 0.5s ease;
   }
-
+  .imghover:hover {
+    background-image: url('/common/imghoverimg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .swiper-slide {
     background-position: center;
     background-size: cover;
