@@ -313,66 +313,67 @@
 
     <!-- 时间线 -->
     <div class="time-line-bg w-full h-60vh">
-      <div class="h-120 pt-20 flex-center flex-wrap">
-        <div>
-          <h2 class="text-center text-3xl font-bold mb-4">
-            三油科技的自我修行，走过的每一步都是蜕变
-          </h2>
-          <p class="color-#666 mb-20 text-center indent-md m-auto pt-10 w-200">
+      <div class="pt-20 w-400 m-auto">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold mb-4"> 三油科技的自我修行，走过的每一步都是蜕变 </h2>
+          <p class="color-#666 mb-20 m-auto pt-10 w-200">
             三油科技沉淀了海纳百川的文化哲学，构建与客户、员工、合伙人和社会共享共赢的文化关系，并以此建立与所有参与者共融共生的AI商业生态圈，践行各项创新发展举措，致力启发人工智能思维在中国的崛起，推动人工智能改变中国。
           </p>
         </div>
-        <n-timeline horizontal class="text-center text-3xl flex-center">
-          <n-timeline-item content="SmartGeo" />
-          <n-timeline-item type="success" title="项目筹划" time="2020-10" />
-          <n-timeline-item type="info" content="团队组件" time="2021-3" />
-          <n-timeline-item type="success" title="北京三油科技成立" content="" time="2021-5" />
-          <n-timeline-item
-            type="info"
-            title="发布SmartGeo1.0beta"
-            content="专注地震记录的初至拾取"
-            time="2021-7"
-          />
-          <n-timeline-item
-            type="success"
-            title="验证SmartGeo推理速度"
-            content="优化产品设计架构"
-            time="2022-7"
-          />
-          <n-timeline-item
-            type="info"
-            title="发布SmartGeo2.0预发布"
-            content="优化运算速度及文件读取速度"
-            time="2021-9"
-          />
-          <n-timeline-item
-            type="success"
-            title="三层断层识别 三层层位识别"
-            content=""
-            time="2021-10"
-          />
-          <n-timeline-item
-            type="info"
-            title="初至拾取二代模型"
-            content="地下异常体识别训练"
-            time="2021-11"
-          /><n-timeline-item
-            type="success"
-            title="规划SmartGeo3.0"
-            content="SegD格式支持,工程物探煤田数据收集  "
-            time="2021-12"
-          />
-          <n-timeline-item
-            type="info"
-            title="发布SmartGeo行业版本"
-            content="开发通用物探模型"
-            time="2022-3"
-          />
-          <n-timeline-item type="success" title="地震地质灾害" content="" time="2022-5" />
-          <n-timeline-item title="持续更新行业数据仓及算法模型" content="开" time="" />
-        </n-timeline>
+        <n-scrollbar x-scrollable>
+          <n-timeline horizontal class="text-center text-3xl">
+            <n-timeline-item content="SmartGeo" />
+            <n-timeline-item type="success" title="项目筹划" time="2020-10" />
+            <n-timeline-item type="info" content="团队组件" time="2021-3" />
+            <n-timeline-item type="success" title="北京三油科技成立" content="" time="2021-5" />
+            <n-timeline-item
+              type="info"
+              title="发布SmartGeo1.0beta"
+              content="专注地震记录的初至拾取"
+              time="2021-7"
+            />
+            <n-timeline-item
+              type="success"
+              title="验证SmartGeo推理速度"
+              content="优化产品设计架构"
+              time="2022-7"
+            />
+            <n-timeline-item
+              type="info"
+              title="发布SmartGeo2.0预发布"
+              content="优化运算速度及文件读取速度"
+              time="2021-9"
+            />
+            <n-timeline-item
+              type="success"
+              title="三层断层识别 三层层位识别"
+              content=""
+              time="2021-10"
+            />
+            <n-timeline-item
+              type="info"
+              title="初至拾取二代模型"
+              content="地下异常体识别训练"
+              time="2021-11"
+            /><n-timeline-item
+              type="success"
+              title="规划SmartGeo3.0"
+              content="SegD格式支持,工程物探煤田数据收集  "
+              time="2021-12"
+            />
+            <n-timeline-item
+              type="info"
+              title="发布SmartGeo行业版本"
+              content="开发通用物探模型"
+              time="2022-3"
+            />
+            <n-timeline-item type="success" title="地震地质灾害" content="" time="2022-5" />
+            <n-timeline-item title="持续更新行业数据仓及算法模型" content="开" time="" />
+          </n-timeline>
+        </n-scrollbar>
       </div>
     </div>
+
     <!-- 联系 -->
     <!-- <Contact /> -->
     <!-- 底部 -->
