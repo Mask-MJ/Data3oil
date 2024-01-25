@@ -45,6 +45,80 @@
       title: '近期研究取得可喜进展和丰硕成果，展示良好发展前景和丰富的应用场景',
     },
   ];
+  const mockData = [
+    {
+      id: 1,
+      title: '标题',
+      keyword: '关键字',
+      subtitle: '小标题',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze4.jpg',
+      img2: '/common/wanshanimgfaze1.jpg',
+      icon1: '/icon/mokuai1.png',
+    },
+    {
+      id: 2,
+      title: '标题',
+      subtitle: '小标题',
+      keyword: '关键字',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze1.jpg',
+      img2: '/common/wanshanimgfaze4.jpg',
+      icon1: '/icon/mokuai2.png',
+    },
+    {
+      id: 3,
+      title: '标题',
+      subtitle: '小标题',
+      keyword: '关键字',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze4.jpg',
+      img2: '/common/wanshanimgfaze1.jpg',
+      icon1: '/icon/mokuai3.png',
+    },
+    {
+      id: 4,
+      title: '标题',
+      subtitle: '小标题',
+      keyword: '关键字',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze1.jpg',
+      img2: '/common/wanshanimgfaze4.jpg',
+      icon1: '/icon/mokuai4.png',
+    },
+    {
+      id: 5,
+      title: '标题',
+      subtitle: '小标题',
+      keyword: '关键字',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述  内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze4.jpg',
+      img2: '/common/wanshanimgfaze1.jpg',
+      icon1: '/icon/mokuai5.png',
+    },
+    {
+      id: 6,
+      title: '标题',
+      subtitle: '小标题',
+      keyword: '关键字',
+      desc1: '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 ',
+      desc2:
+        '内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述 内容描述',
+      img1: '/common/wanshanimgfaze1.jpg',
+      img2: '/common/wanshanimgfaze4.jpg',
+      icon1: '/icon/mokuai6.png',
+    },
+  ];
   const active = ref(1);
   // hover触发事件
   const changeActive = (index: number) => {
@@ -156,10 +230,26 @@
         </div>
       </div>
     </div>
+    <!-- card1 -->
+    <div class="news py-20 m-auto w-400">
+      <h2 class="text-3xl font-bold mb-10">标题</h2>
+      <div class="card1-bg w-full h-120 relative">
+        <ul class="flex absolute top-55% left-5%">
+          <li
+            v-for="item in mockData.slice(2)"
+            :key="item.id"
+            class="m-5 p-5 w-80 h-40 b-rd-3 bg-white opacity-75 hover:-translate-y-8 transition-all-400 hover:color-cyan-500"
+          >
+            <h3 class="text-2xl font-bold mb-3">{{ item.title }}</h3>
+            <img :src="item.icon1" class="ml-50" />
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- 新闻资讯 -->
-    <div class="news py-20 mx-80">
+    <div class="news py-20 mb-10 m-auto w-400">
       <h2 class="text-3xl font-bold mb-10">新闻资讯</h2>
-      <n-grid :x-gap="20" :y-gap="16" :cols="3">
+      <n-grid :x-gap="24" :y-gap="16" :cols="3">
         <n-grid-item :span="2">
           <n-carousel autoplay draggable class="b-rd-2">
             <img class="carousel-img" src="/home/xibao.png" />
@@ -197,28 +287,27 @@
         </n-grid-item>
       </n-grid>
     </div>
+
     <!-- 数字化转型案例 -->
-    <div class="py-20 mx-80">
+    <!-- <div class="py-20 mx-80">
       <h2 class="text-3xl font-bold mb-10">数字化转型案例</h2>
       <div class="h-100 border border-#999">内容占位</div>
-    </div>
+    </div> -->
     <!-- 地球物理板块 -->
-    <div class="py-20 mx-80">
+    <!-- <div class="py-20 mx-80">
       <h2 class="text-3xl font-bold mb-10">地球物理板块</h2>
       <div class="h-100 border border-#999">内容占位</div>
-    </div>
+    </div> -->
     <!-- 深度学习算法预研 -->
-    <div class="py-20 mx-80">
+    <!-- <div class="py-20 mx-80">
       <h2 class="text-3xl font-bold mb-10">深度学习算法预研</h2>
       <div class="h-100 border border-#999">内容占位</div>
-    </div>
+    </div> -->
     <!-- 大模型技术跟踪 -->
-    <div class="py-20 mx-80">
+    <!-- <div class="py-20 mx-80">
       <h2 class="text-3xl font-bold mb-10">大模型技术跟踪</h2>
       <div class="h-100 border border-#999">内容占位</div>
-    </div>
-
-    <!-- 联系 -->
+    </div> -->
 
     <!-- 底部占位 -->
     <NavFooter />
@@ -283,6 +372,11 @@
 
   .company-introduction {
     background: url('/common/gongsijieshao.jpg') no-repeat center;
+    background-size: cover;
+  }
+  .card1-bg {
+    background-image: url(/common/stock-map.png);
+    background-repeat: no-repeat;
     background-size: cover;
   }
   .news {
