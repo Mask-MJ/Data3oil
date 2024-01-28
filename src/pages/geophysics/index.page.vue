@@ -132,7 +132,7 @@
       </h2>
     </div>
     <!-- card1 行业背景 -->
-    <div class="industrial-bg w-full h-80vh py-20">
+    <div class="industrial-bg w-full py-20">
       <div class="w-400 m-auto">
         <h2 class="text-center text-4xl leading-snug pb-10">地球物理勘探</h2>
         <n-tabs

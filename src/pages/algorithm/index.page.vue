@@ -108,9 +108,9 @@
       <h2 class="mb-5 text-center text-4xl leading-snug color-white pt-80"> 深度学习算法预研 </h2>
     </div>
     <!-- card1 -->
-    <div class="bg-#d9eafb w-full h-80vh">
+    <div class="bg-#d9eafb w-full pb-40">
       <div class="w-400 m-auto">
-        <h2 class="py-20 text-4xl leading-snug text-center"> 深度学习算法预研 </h2>
+        <h2 class="py-20 mb-10 text-4xl leading-snug text-center"> 深度学习算法预研 </h2>
         <!-- <p class="color-#666">描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p> -->
         <div class="flex-between h-150">
           <div class="text-center bg-white b-rd-1 w-80">
@@ -195,7 +195,7 @@
       </div>
     </div>
     <!-- card2 -->
-    <div class="w-full h-100vh">
+    <div class="w-full">
       <div class="w-400 m-auto">
         <div class="text-center py-20">
           <h2 class="pb-10 text-4xl"> 深度学习算法预研 </h2>
@@ -256,9 +256,9 @@
       </div>
     </div>
     <!-- card3 -->
-    <div class="w-full h-100vh card3-bg">
+    <div class="w-full card3-bg py-30">
       <div class="w-400 m-auto">
-        <div class="text-center color-white py-20">
+        <div class="text-center color-white pb-20">
           <h2 class="text-4xl pb-5">标题</h2>
           <p class=""> 描述描述描述描述描述描述描述描述描述描述描述描述描述描述 </p>
         </div>
@@ -282,7 +282,7 @@
           </div>
         </div>
 
-        <div class="flex-between mb-20">
+        <div class="flex-between">
           <div
             v-for="item in mockData.slice(2)"
             :key="item.id"

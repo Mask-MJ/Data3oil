@@ -145,7 +145,7 @@
       <h2 class="mb-5 text-center text-4xl leading-snug color-white pt-80"> 数字化转型案例 </h2>
     </div>
     <!-- 行业背景 -->
-    <div class="industrial-bg w-full h-80vh m-auto py-20">
+    <div class="industrial-bg w-full m-auto py-20">
       <h2 class="mb-10 text-center text-4xl leading-snug">数字化转型案例</h2>
       <n-tabs
         type="segment"

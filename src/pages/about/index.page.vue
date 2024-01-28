@@ -100,10 +100,10 @@
 <template>
   <div>
     <!-- 首屏 -->
-    <div class="screen">
+    <div class="screen relative">
       <img src="/FirstScreenBG/beijing1.webp" class="w-full h-80vh" />
       <NavBar />
-      <div class="absolute top-20% left-20% -translate-50% color-white">
+      <div class="absolute top-20% left-20% color-white">
         <p class="mb-5 text-center text-4xl leading-snug">
           用AI为传统央企数字化赋能
           <br />
@@ -218,9 +218,9 @@
     </div>
 
     <!-- 企业文化 -->
-    <div class="culture-bg w-full h-70vh">
-      <div class="w-80% h-120 m-auto">
-        <p class="color-#333 mb-5 text-center pt-20">企业文化</p>
+    <div class="culture-bg w-full py-20">
+      <div class="w-80% m-auto">
+        <p class="color-#333 mb-5 text-center">企业文化</p>
         <h2 class="text-center text-3xl font-bold mb-4">心无旁骛，深耕主业，创新变革，自强不息 </h2>
         <p class="color-#333 mb-20 text-center indent-md m-auto pt-10 w-200">
           三油科技沉淀了海纳百川的文化哲学，构建与客户、员工、合伙人和社会共享共赢的文化关系，并以此建立与所有参与者共融共生的AI商业生态圈，践行各项创新发展举措，致力启发人工智能思维在中国的崛起，推动人工智能改变中国。
@@ -312,8 +312,8 @@
     </div>
 
     <!-- 时间线 -->
-    <div class="time-line-bg w-full h-60vh">
-      <div class="pt-20 w-400 m-auto">
+    <div class="time-line-bg w-full py-20">
+      <div class="w-400 m-auto">
         <div class="text-center">
           <h2 class="text-3xl font-bold mb-4"> 三油科技的自我修行，走过的每一步都是蜕变 </h2>
           <p class="color-#666 mb-20 m-auto pt-10 w-200">

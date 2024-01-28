@@ -93,7 +93,7 @@
       <h2 class="mb-5 text-center text-4xl color-white pt-80"> 大模型技术跟踪 </h2>
     </div>
     <!-- card1 -->
-    <div class="card1-bg w-full h-100vh">
+    <div class="card1-bg w-full">
       <div class="w-400 m-auto py-20">
         <div class="text-center">
           <h2 class="mb-10 text-4xl">
