@@ -158,7 +158,7 @@
       </div>
     </div>
     <!-- 商业生态 -->
-    <div class="business-ecology mt-100vh py-25">
+    <div class="business-ecology py-25">
       <div class="text-center mb-10">
         <p class="color-#666 mb-2"> 商业生态 </p>
         <h2 class="text-3xl font-bold mb-4">
@@ -318,6 +318,9 @@
 
 <style lang="scss" scoped>
   .screen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
     .video {
       position: absolute;
       top: 0;

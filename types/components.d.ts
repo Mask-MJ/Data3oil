@@ -12,18 +12,14 @@ declare module 'vue' {
     NavBar: (typeof import('./../src/components/common/NavBar.vue'))['default'];
     NavFooter: (typeof import('./../src/components/common/NavFooter.vue'))['default'];
     NBackTop: (typeof import('naive-ui'))['NBackTop'];
-    NButton: (typeof import('naive-ui'))['NButton'];
     NCard: (typeof import('naive-ui'))['NCard'];
     NCarousel: (typeof import('naive-ui'))['NCarousel'];
     NConfigProvider: (typeof import('naive-ui'))['NConfigProvider'];
     NDialogProvider: (typeof import('naive-ui'))['NDialogProvider'];
     NFlex: (typeof import('naive-ui'))['NFlex'];
-    NForm: (typeof import('naive-ui'))['NForm'];
     NGi: (typeof import('naive-ui'))['NGi'];
     NGrid: (typeof import('naive-ui'))['NGrid'];
     NGridItem: (typeof import('naive-ui'))['NGridItem'];
-    NIcon: (typeof import('naive-ui'))['NIcon'];
-    NInput: (typeof import('naive-ui'))['NInput'];
     NLoadingBarProvider: (typeof import('naive-ui'))['NLoadingBarProvider'];
     NMessageProvider: (typeof import('naive-ui'))['NMessageProvider'];
     NNotificationProvider: (typeof import('naive-ui'))['NNotificationProvider'];
