@@ -40,6 +40,7 @@
 <style lang="scss" scoped>
   .header {
     border-bottom: 1px solid rgba(226, 226, 226, 0.3);
+    min-width: 1200px;
   }
   .item {
     li {
