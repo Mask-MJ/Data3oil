@@ -26,7 +26,7 @@
     class="header w-full flex-center color-white hover:bg-white hover:color-black fixed top-0 transition-500 z-999"
     :class="scrollY && 'bg-white color-black! '"
   >
-    <img class="w-20 h-20" src="/logo.jpg" alt="" />
+    <img class="w-20 h-20" src="/logo.png" alt="" />
     <ul class="item w-250 flex-center">
       <li v-for="item in menuOptions" :key="item.id" class="mx-4 text-lg">
         <router-link :to="item.path">
