@@ -145,7 +145,7 @@
       ></video>
       <NavBar />
       <div
-        class="absolute top-85% left-50% -translate-50% text-center text-4xl leading-snug color-white"
+        class="absolute top-82% left-50% -translate-50% text-center text-4xl leading-snug color-white"
       >
         <p class="mb-10">
           用AI为传统央企数字化赋能
