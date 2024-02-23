@@ -293,14 +293,14 @@
       <h2 class="text-3xl font-bold mb-10">数字化转型案例</h2>
       <div class="h-100 border border-#999">内容占位</div>
     </div> -->
-    <!-- 地球物理板块 -->
+    <!-- 能源板块 -->
     <!-- <div class="py-20 mx-80">
-      <h2 class="text-3xl font-bold mb-10">地球物理板块</h2>
+      <h2 class="text-3xl font-bold mb-10">能源板块</h2>
       <div class="h-100 border border-#999">内容占位</div>
     </div> -->
-    <!-- 深度学习算法预研 -->
+    <!-- 人工智能 -->
     <!-- <div class="py-20 mx-80">
-      <h2 class="text-3xl font-bold mb-10">深度学习算法预研</h2>
+      <h2 class="text-3xl font-bold mb-10">人工智能</h2>
       <div class="h-100 border border-#999">内容占位</div>
     </div> -->
     <!-- 大模型技术跟踪 -->

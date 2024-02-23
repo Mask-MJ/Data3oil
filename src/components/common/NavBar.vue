@@ -3,9 +3,9 @@
     { id: 'home', label: '首页', path: '/' },
     { id: 'about', label: '公司简介', path: '/about' },
     { id: 'digitalize', label: '数字化转型案例', path: '/digitalize' },
-    { id: 'outerModel', label: '大模型技术跟踪', path: '/outerModel' },
-    { id: 'algorithm', label: '深度学习算法预研', path: '/algorithm' },
-    { id: 'geophysics', label: '地球物理板块', path: '/geophysics' },
+    { id: 'outerModel', label: '大模型', path: '/outerModel' },
+    { id: 'intelligence', label: '人工智能', path: '/intelligence' },
+    { id: 'energy', label: '能源板块', path: '/energy' },
     { id: 'news', label: '新闻资讯', path: '/news' },
   ];
   const scrollY = ref(0);

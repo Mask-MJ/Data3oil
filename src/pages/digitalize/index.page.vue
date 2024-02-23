@@ -12,44 +12,44 @@
   // import { EffectCoverflow, Pagination, EffectCube, Navigation } from 'swiper/modules';
 
   // const showList = [
-  //   '/geophysics/jishuzhanshi1.png',
-  //   '/geophysics/jishuzhanshi2.png',
-  //   '/geophysics/jishuzhanshi3.png',
-  //   '/geophysics/jishuzhanshi4.png',
-  //   '/geophysics/jishuzhanshi5.png',
-  //   '/geophysics/jishuzhanshi7.png',
-  //   '/geophysics/jishuzhanshi8.png',
-  //   '/geophysics/jishuzhanshi9.png',
-  //   '/geophysics/jishuzhanshi17.png',
-  //   '/geophysics/jishuzhanshi18.png',
-  //   '/geophysics/jishuzhanshi19.png',
+  //   '/energy/jishuzhanshi1.png',
+  //   '/energy/jishuzhanshi2.png',
+  //   '/energy/jishuzhanshi3.png',
+  //   '/energy/jishuzhanshi4.png',
+  //   '/energy/jishuzhanshi5.png',
+  //   '/energy/jishuzhanshi7.png',
+  //   '/energy/jishuzhanshi8.png',
+  //   '/energy/jishuzhanshi9.png',
+  //   '/energy/jishuzhanshi17.png',
+  //   '/energy/jishuzhanshi18.png',
+  //   '/energy/jishuzhanshi19.png',
   // ];
 
-  // const algorithmList = [
+  // const intelligenceList = [
   //   {
   //     id: '01',
   //     title: '关键点识别',
-  //     img: '/geophysics/suanfa1.png',
+  //     img: '/energy/suanfa1.png',
   //   },
   //   {
   //     id: '02',
   //     title: '目标检测',
-  //     img: '/geophysics/suanfa2.png',
+  //     img: '/energy/suanfa2.png',
   //   },
   //   {
   //     id: '03',
   //     title: '三维室内数据配准',
-  //     img: '/geophysics/suanfa3.png',
+  //     img: '/energy/suanfa3.png',
   //   },
   //   {
   //     id: '04',
   //     title: '语义分割',
-  //     img: '/geophysics/suanfa4.png',
+  //     img: '/energy/suanfa4.png',
   //   },
   //   {
   //     id: '05',
   //     title: '目标跟踪',
-  //     img: '/geophysics/suanfa5.mp4',
+  //     img: '/energy/suanfa5.mp4',
   //   },
   // ];
 
@@ -61,7 +61,7 @@
         '我国企业数字化转型是一项长期任务，企业数字化是推进信息化的最好方法，数字化带来了数据化，人工智能是企业实现智能化的主要途径。业务生产出数据、数据再反哺业务，从而整体推动企业数字化转型。企业数字化转型是一项长期任务，企业数字化是推进信息化的最好方法，数字化带来了数据化，人工智能是企业实现智能化的主要途径。业务生产出数据、数据再反哺业务，从而整体推动企业数字化转型。',
       desc2:
         '截止至2018年我国数字经济规模达到31.3万亿元，按可比口径计算，名义增长20.9%，占GDP比重为34.8%，占比同比提升1.9个百分点，据相关机构预测，AI未来10年将创造16万亿美元？',
-      img: '/geophysics/hangyebeijing1.png',
+      img: '/energy/hangyebeijing1.png',
     },
     {
       id: 2,
@@ -70,7 +70,7 @@
         '地球物理勘探是探索地球本体及近地空间的介质结构、物质组成、形成和演化，研究与其相关的各种自然现象及其变化的规律。',
       desc2:
         '在此基础上为探测地球内部结构与构造、寻找能源、资源和环境监测提供理论、方法和技术，为灾害预报提供重要依据，涵括石油、煤炭、金属矿场、水文、地质灾害等。',
-      img: '/geophysics/xiangmubeijing2.png',
+      img: '/energy/xiangmubeijing2.png',
     },
     {
       id: 3,
@@ -79,7 +79,7 @@
         '主要研发方向：形成一套以SEGY格式管理且方便地球物理工作人员应用深度学习（网络）技术的大数据集合，并基于数据流形成SmartGeo智能工坊平台。',
       desc2:
         'AI在物探领域的应用大多停留在实验室研发、测试阶段，少量已在市场主流软件中运用，在传统算力提升降速的情况下，作为长期受制于算力的信号处理运算行业，AI算力的飞速发展将极大程度推动物探行业提质增效。',
-      img: '/geophysics/qianjing1.png',
+      img: '/energy/qianjing1.png',
     },
   ];
 
@@ -295,10 +295,10 @@
         class="w-200 m-auto"
       >
         <SwiperSlide>
-          <img class="carousel-img" src="/geophysics/yanfa2.png" alt="" />
+          <img class="carousel-img" src="/energy/yanfa2.png" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img class="carousel-img" src="/geophysics/yanfa1.jpg" alt="" />
+          <img class="carousel-img" src="/energy/yanfa1.jpg" alt="" />
         </SwiperSlide>
       </Swiper> -->
       </div>
@@ -348,7 +348,7 @@
       :modules="[Pagination, Navigation]"
       class="w-400 m-auto mb-20"
     >
-      <SwiperSlide v-for="item in algorithmList" :key="item.id">
+      <SwiperSlide v-for="item in intelligenceList" :key="item.id">
         <div class="text-xl font-bold pb-5 text-center">{{ item.title }}</div>
         <img
           v-if="item.title !== '目标跟踪'"
@@ -406,7 +406,7 @@
     display: block;
     width: 100%;
   }
-  .algorithm {
+  .intelligence {
     position: absolute;
     top: 0;
     left: 0;

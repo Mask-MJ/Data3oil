@@ -1,4 +1,4 @@
-<!-- 大模型技术跟踪 -->
+<!-- 大模型 -->
 <script setup lang="ts">
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -90,7 +90,7 @@
     <!-- 首屏 -->
     <div class="first-screen-bg w-full h-100vh">
       <NavBar />
-      <h2 class="mb-5 text-center text-4xl color-white pt-80"> 大模型技术跟踪 </h2>
+      <h2 class="mb-5 text-center text-4xl color-white pt-80"> 大模型 </h2>
     </div>
     <!-- card1 -->
     <div class="card1-bg w-full">
@@ -98,7 +98,7 @@
         <div class="text-center">
           <h2 class="mb-10 text-4xl">
             <i class="i-line-md:square-twotone text-xl color-#0c6fea text-center"></i>
-            大模型技术跟踪
+            大模型
             <i class="i-line-md:square-twotone text-xl color-#0c6fea text-center"></i>
           </h2>
           <p class="color-#666">描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>

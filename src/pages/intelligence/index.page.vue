@@ -1,4 +1,4 @@
-<!-- 深度学习算法预研 -->
+<!-- 人工智能 -->
 <script setup lang="ts">
   const mockData = [
     {
@@ -105,12 +105,12 @@
     <!-- 首屏 -->
     <div class="first-screen-bg w-full h-100vh">
       <NavBar />
-      <h2 class="mb-5 text-center text-4xl leading-snug color-white pt-80"> 深度学习算法预研 </h2>
+      <h2 class="mb-5 text-center text-4xl leading-snug color-white pt-80"> 人工智能 </h2>
     </div>
     <!-- card1 -->
     <div class="bg-#d9eafb w-full pb-40">
       <div class="w-400 m-auto">
-        <h2 class="py-20 mb-10 text-4xl leading-snug text-center"> 深度学习算法预研 </h2>
+        <h2 class="py-20 mb-10 text-4xl leading-snug text-center"> 人工智能 </h2>
         <!-- <p class="color-#666">描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p> -->
         <div class="flex-between h-150">
           <div class="text-center bg-white b-rd-1 w-80">
@@ -198,7 +198,7 @@
     <div class="w-full">
       <div class="w-400 m-auto">
         <div class="text-center py-20">
-          <h2 class="pb-10 text-4xl"> 深度学习算法预研 </h2>
+          <h2 class="pb-10 text-4xl"> 人工智能 </h2>
           <p class="color-#666">描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
         </div>
         <div class="flex">

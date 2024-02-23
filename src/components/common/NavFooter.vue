@@ -6,8 +6,8 @@
       children: [
         { subtitle: '与时俱进', path: '/' },
         { subtitle: '数字化转型案例', path: '/' },
-        { subtitle: '地球物理板块', path: '/' },
-        { subtitle: '深度学习算法预研', path: '/' },
+        { subtitle: '能源板块', path: '/' },
+        { subtitle: '人工智能', path: '/' },
         { subtitle: '大模型技术跟踪', path: '/' },
       ],
     },
